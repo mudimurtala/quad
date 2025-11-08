@@ -1,6 +1,21 @@
-package piscine
+package main
 
-import "github.com/01-edu/z01"
+import (
+    "os"
+    "strconv"
+	"github.com/01-edu/z01"
+)
+
+func main() {
+    if len(os.Args) != 3 {
+        return
+    }
+    
+    x, _ := strconv.Atoi(os.Args[1])
+    y, _ := strconv.Atoi(os.Args[2])
+
+    QuadD(x, y)
+}
 
 func QuadD(x, y int) {
 	if x <= 0 || y <= 0 {
